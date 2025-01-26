@@ -1,8 +1,8 @@
 export default function Total({ parts }) {
 	return (
 		<p>
-			Number of exercises
-			{parts[0].exercises + parts[1].exercises + parts[2].exercises}
+			Total of {parts.reduce((total, part) => total + part.exercises, 0)}{' '}
+			exercises
 		</p>
 	);
 }
